@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import NavBar from "../components/common/NavBar";
 
 const ShopPage = () => {
   return (
-    <div>ShopPage</div>
-  )
-}
+    <div>
+      <NavBar />
+      <h1>ShopPage</h1>
+    </div>
+  );
+};
 
-export default ShopPage
+export default ShopPage;

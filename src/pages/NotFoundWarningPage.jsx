@@ -1,7 +1,13 @@
 import React from "react";
+import NavBar from "../components/common/NavBar";
 
 const NotFoundWarningPage = () => {
-  return <div>NotFoundWarningPage</div>;
+  return (
+    <div>
+      <NavBar />
+      <h1>NotFoundWarningPage</h1>
+    </div>
+  );
 };
 
 export default NotFoundWarningPage;
