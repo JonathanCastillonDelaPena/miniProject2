@@ -1,6 +1,6 @@
-import "./css/App.css";
+import "./clientSide/css/App.css";
 import { BrowserRouter } from "react-router-dom";
-import RoutesController from "./components/pageRouter/RoutesController";
+import RoutesController from "./clientSide/components/pageRouter/RoutesController";
 
 function App() {
   return (
