@@ -1,12 +1,12 @@
 import "./css/App.css";
-import Homepage from './pages/Homepage';
-
+import { BrowserRouter } from "react-router-dom";
+import RoutesController from "./components/pageRouter/RoutesController";
 
 function App() {
   return (
-    <div className="container">
-      <Homepage/>
-    </div>
+    <BrowserRouter>
+      <RoutesController />
+    </BrowserRouter>
   );
 }
 

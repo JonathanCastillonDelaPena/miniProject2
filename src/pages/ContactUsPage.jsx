@@ -1,13 +1,13 @@
 import React from "react";
 import NavBar from "../components/common/NavBar";
 
-const ShopPage = () => {
+const ContactUsPage = () => {
   return (
     <div>
       <NavBar />
-      <h1>ShopPage</h1>
+      <h1>ContactUsPage</h1>
     </div>
   );
 };
 
-export default ShopPage;
+export default ContactUsPage;
