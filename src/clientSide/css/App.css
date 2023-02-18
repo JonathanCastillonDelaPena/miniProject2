@@ -243,6 +243,7 @@ button,
   appearance: none;
 -moz-appearance: none;
   -webkit-appearance: button;
+
 }
 
 button:not(:disabled),
