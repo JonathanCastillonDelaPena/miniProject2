@@ -17,6 +17,9 @@ const NavBar = () => {
         <Link to={"/testingPage"}>
           <i className="fa fa-bug">Test</i>
         </Link>
+        <Link to={"/admin"}>
+          <i className="fa fa-home">Temporary Admin Side</i>
+        </Link>
       </div>
     </nav>
   );
