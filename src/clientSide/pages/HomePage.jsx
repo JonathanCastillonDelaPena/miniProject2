@@ -8,6 +8,7 @@ import ProductCards from "../components/ProductCards";
 import Subscribe from "../components/Subscribe";
 import Top from "../components/Top";
 import VendorCarousel from "../components/VendorCarousel";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
         <BestProducts />
         <Subscribe />
         <VendorCarousel />
+        <Footer />
       </div>
     </div>
   );
