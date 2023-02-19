@@ -1,7 +1,7 @@
 const db = require("../data/database");
 const Test = db.tests;
 
-exports.create = (req, res) => {
+const create = (req, res) => {
   const data = req.body;
   // Validate request
   if (!data.name) {
@@ -30,16 +30,27 @@ exports.create = (req, res) => {
     });
 };
 
-exports.findAll = (req, res) => {};
+const findAll = (req, res) => {};
 
-exports.findOne = (req, res) => {};
+const findOne = (req, res) => {};
 
-exports.update = (req, res) => {};
+const update = (req, res) => {};
 
-exports.delete = (req, res) => {};
+const remove = (req, res) => {};
 
-exports.deleteAll = (req, res) => {};
+const removeAll = (req, res) => {};
 
-exports.testGet = (req, res) => {
+const testGet = (req, res) => {
   res.json({ message: "Test Route..." });
 };
+
+const testController = {
+  create,
+  findAll,
+  findOne,
+  update,
+  remove,
+  removeAll,
+  testGet,
+};
+module.exports = testController;

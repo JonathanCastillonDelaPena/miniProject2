@@ -3,6 +3,6 @@ const router = require("express").Router();
 
 router.get("/", test.testGet);
 
-router.post("/test", test.create);
+router.post("/", test.create);
 
 module.exports = router;
