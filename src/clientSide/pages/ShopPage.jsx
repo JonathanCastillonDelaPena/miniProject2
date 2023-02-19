@@ -10,10 +10,10 @@ const ShopPage = () => {
     <div>
       <NavBar />
       <div className="container">
-      <Top />
-      {/* <PageHeader /> */}
-      <Shop />
-      <Footer />
+        <Top />
+        <PageHeader />
+        <Shop />
+        <Footer />
       </div>
     </div>
   );
