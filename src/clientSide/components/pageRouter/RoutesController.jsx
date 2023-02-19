@@ -6,6 +6,7 @@ import ShopPage from "../../pages/ShopPage";
 import ContactUsPage from "../../pages/ContactUsPage";
 import Dashboard from "../../../adminSide/components/Dashboard";
 import CustomerInfo from "../../../adminSide/components/CustomerInfo";
+import TestPage from "../../pages/TestPage/TestPage";
 
 const RoutesController = () => {
   return (
@@ -15,10 +16,12 @@ const RoutesController = () => {
       <Route path="/home" element={<HomePage />} />
       <Route path="/shop" element={<ShopPage />} />
       <Route path="/contact" element={<ContactUsPage />} />
-
       {/* Temporary Linking to the Admin Side */}
       <Route path="/admin" element={<Dashboard />} />
       <Route path="/admin/customer" element={<CustomerInfo />} />
+
+      {/* Testing Page */}
+      <Route path="/testingPage" element={<TestPage />} />
     </Routes>
   );
 };
