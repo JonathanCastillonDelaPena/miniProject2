@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Chart from "./Chart";
 import Calendar from "../components/Calendar";
+import NavBar from "./NavBar";
 
 const CustomerInfo = () => {
   return (
@@ -9,6 +10,7 @@ const CustomerInfo = () => {
       <Sidebar />
       <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div className="pt-3 pb-2 mb-3 border-bottom border-dark">
+          <NavBar />
           <h1 className="h2">Customer Info</h1>
         </div>
         <div className="row">
@@ -47,9 +49,7 @@ const CustomerInfo = () => {
                     />
 
                     <div class=" px-4">
-                      <p class="mb-0">
-                      Ready to ship!!!
-                      </p>
+                      <p class="mb-0">Ready to ship!!!</p>
                     </div>
 
                     <div class="button">
