@@ -22,7 +22,9 @@ const CreateTestRecord = () => {
     setSubmitted(false);
   };
 
-  const saveTest = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     let data = {
       name: test.name,
       number: test.number,
@@ -45,7 +47,7 @@ const CreateTestRecord = () => {
   };
 
   return (
-    <form method="post">
+    <form onSubmit={handleSubmit}>
       {submitted ? (
         <div>
           <h4>Test Record Submitted!</h4>
@@ -90,7 +92,7 @@ const CreateTestRecord = () => {
               <option value="false">false</option>
             </select>
           </div>
-          <button className="btn btn-success" onClick={saveTest}>
+          <button type="submit" className="btn btn-success">
             Submit
           </button>
         </div>
