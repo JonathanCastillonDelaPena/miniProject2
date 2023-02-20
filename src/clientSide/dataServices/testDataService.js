@@ -1,12 +1,12 @@
-import http from "../httpCommon";
+import serverURI from "../dbServerURI";
 const testBaseURL = "/testingPage";
 
 const getAll = () => {
-  return http.get(testBaseURL);
+  return serverURI.get(testBaseURL);
 };
 
 const create = (data) => {
-  return http.post(testBaseURL, data);
+  return serverURI.post(testBaseURL, data);
 };
 
 const TestDataService = { getAll, create };
