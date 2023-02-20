@@ -33,7 +33,7 @@ const create = (req, res) => {
 const findAll = (req, res) => {
   const name = req.query.name;
   let condition = name
-    ? { name: { $regex: new RegExp(name), $option: "i" } }
+    ? { name: { $regex: new RegExp(name), $options: "i" } }
     : {};
 
   Test.find(condition)
