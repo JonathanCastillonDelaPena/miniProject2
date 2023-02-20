@@ -5,11 +5,6 @@ const dotEnv = require("dotenv");
 dotEnv.config();
 const app = express();
 
-// const corsOptions = {
-//   origin: "http://localhost:8081",
-// };
-
-// app.use(cors(corsOptions));
 app.use(cors());
 
 app.use(express.json());
@@ -17,7 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const testRoutes = require("./src/routes/testRoutes");
 app.use("/testingPage", testRoutes);
-// require("./src/routes/testRoutes")(app);
 
 // set PORT to listen for requests
 const PORT = process.env.PORT || 8081;
