@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../../components/common/NavBar";
 import CreateTestRecord from "./components/CreateTestRecord";
+import ListTestRecords from "./components/ListTestRecords";
 
 const TestPage = () => {
   return (
@@ -8,6 +9,7 @@ const TestPage = () => {
       <NavBar />
       <div className="container">
         <CreateTestRecord />
+        <ListTestRecords />
       </div>
     </div>
   );

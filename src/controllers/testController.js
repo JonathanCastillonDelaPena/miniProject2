@@ -30,7 +30,23 @@ const create = (req, res) => {
     });
 };
 
-const findAll = (req, res) => {};
+const findAll = (req, res) => {
+  const name = req.query.name;
+  let condition = name
+    ? { name: { $regex: new RegExp(name), $option: "i" } }
+    : {};
+
+  Test.find(condition)
+    .then((data) => {
+      res.send(data);
+      console.log(`Data retrieved:\n${data}`);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: err.message || "Some error occurred while creating the Test.",
+      });
+    });
+};
 
 const findOne = (req, res) => {};
 
