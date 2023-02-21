@@ -4,11 +4,11 @@ import React from "react";
 const Cart = () => {
   return (
     <div>
-      <div class="container-fluid pt-5">
-        <div class="row px-xl-5">
-          <div class="col-lg-8 table-responsive mb-5">
-            <table class="table table-bordered text-center mb-0">
-              <thead class="bg-secondary text-dark">
+      <div className="container-fluid pt-5">
+        <div className="row px-xl-5">
+          <div className="col-lg-8 table-responsive mb-5">
+            <table className="table table-bordered text-center mb-0">
+              <thead className="bg-secondary text-dark">
                 <tr>
                   <th>Product Name</th>
                   <th>Price</th>
@@ -17,147 +17,147 @@ const Cart = () => {
                   <th>Remove</th>
                 </tr>
               </thead>
-              <tbody class="align-middle">
+              <tbody className="align-middle">
                 <tr>
-                  <td class="align-middle">
+                  <td className="align-middle">
                    
                   </td>
-                  <td class="align-middle"></td>
-                  <td class="align-middle">
+                  <td className="align-middle"></td>
+                  <td className="align-middle">
                     <div
-                      class="input-group quantity mx-auto"
+                      className="input-group quantity mx-auto"
                       style={{width:100}}
                     >
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-primary btn-minus">
-                          <i class="fa fa-minus"></i>
+                      <div className="input-group-btn">
+                        <button className="btn btn-sm btn-primary btn-minus">
+                          <i className="fa fa-minus"></i>
                         </button>
                       </div>
                       <input
                         type="text"
-                        class="form-control form-control-sm bg-secondary text-center"
+                        className="form-control form-control-sm bg-secondary text-center"
                         value="1"
                       />
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-primary btn-plus">
-                          <i class="fa fa-plus"></i>
+                      <div className="input-group-btn">
+                        <button className="btn btn-sm btn-primary btn-plus">
+                          <i className="fa fa-plus"></i>
                         </button>
                       </div>
                     </div>
                   </td>
-                  <td class="align-middle"></td>
-                  <td class="align-middle">
-                    <button class="btn btn-sm btn-primary">
-                      <i class="fa fa-times"></i>
+                  <td className="align-middle"></td>
+                  <td className="align-middle">
+                    <button className="btn btn-sm btn-primary">
+                      <i className="fa fa-times"></i>
                     </button>
                   </td>
                 </tr>
                 <tr>
-                  <td class="align-middle">
+                  <td className="align-middle">
                    
                   </td>
-                  <td class="align-middle"></td>
-                  <td class="align-middle">
+                  <td className="align-middle"></td>
+                  <td className="align-middle">
                     <div
-                      class="input-group quantity mx-auto"
+                      className="input-group quantity mx-auto"
                       style={{width:100}}
                     >
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-primary btn-minus">
-                          <i class="fa fa-minus"></i>
+                      <div className="input-group-btn">
+                        <button className="btn btn-sm btn-primary btn-minus">
+                          <i className="fa fa-minus"></i>
                         </button>
                       </div>
                       <input
                         type="text"
-                        class="form-control form-control-sm bg-secondary text-center"
+                        className="form-control form-control-sm bg-secondary text-center"
                         value="1"
                       />
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-primary btn-plus">
-                          <i class="fa fa-plus"></i>
+                      <div className="input-group-btn">
+                        <button className="btn btn-sm btn-primary btn-plus">
+                          <i className="fa fa-plus"></i>
                         </button>
                       </div>
                     </div>
                   </td>
-                  <td class="align-middle"></td>
-                  <td class="align-middle">
-                    <button class="btn btn-sm btn-primary">
-                      <i class="fa fa-times"></i>
+                  <td className="align-middle"></td>
+                  <td className="align-middle">
+                    <button className="btn btn-sm btn-primary">
+                      <i className="fa fa-times"></i>
                     </button>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="align-middle">
+                  <td className="align-middle">
                    
                   </td>
-                  <td class="align-middle"></td>
-                  <td class="align-middle">
+                  <td className="align-middle"></td>
+                  <td className="align-middle">
                     <div
-                      class="input-group quantity mx-auto"
+                      className="input-group quantity mx-auto"
                       style={{width:100}}
                     >
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-primary btn-minus">
-                          <i class="fa fa-minus"></i>
+                      <div className="input-group-btn">
+                        <button className="btn btn-sm btn-primary btn-minus">
+                          <i className="fa fa-minus"></i>
                         </button>
                       </div>
                       <input
                         type="text"
-                        class="form-control form-control-sm bg-secondary text-center"
+                        className="form-control form-control-sm bg-secondary text-center"
                         value="1"
                       />
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-primary btn-plus">
-                          <i class="fa fa-plus"></i>
+                      <div className="input-group-btn">
+                        <button className="btn btn-sm btn-primary btn-plus">
+                          <i className="fa fa-plus"></i>
                         </button>
                       </div>
                     </div>
                   </td>
-                  <td class="align-middle"></td>
-                  <td class="align-middle">
-                    <button class="btn btn-sm btn-primary">
-                      <i class="fa fa-times"></i>
+                  <td className="align-middle"></td>
+                  <td className="align-middle">
+                    <button className="btn btn-sm btn-primary">
+                      <i className="fa fa-times"></i>
                     </button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="col-lg-4">
-            <form class="mb-5" action="">
-              <div class="input-group">
+          <div className="col-lg-4">
+            <form className="mb-5" action="">
+              <div className="input-group">
                 <input
                   type="text"
-                  class="form-control p-4"
+                  className="form-control p-4"
                   placeholder="Coupon Code"
                 />
-                <div class="input-group-append">
-                  <button class="btn btn-primary">Apply Coupon</button>
+                <div className="input-group-append">
+                  <button className="btn btn-primary">Apply Coupon</button>
                 </div>
               </div>
             </form>
-            <div class="card border-secondary mb-5">
-              <div class="card-header bg-secondary border-0">
-                <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
+            <div className="card border-secondary mb-5">
+              <div className="card-header bg-secondary border-0">
+                <h4 className="font-weight-semi-bold m-0">Cart Summary</h4>
               </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between mb-3 pt-1">
-                  <h6 class="font-weight-medium">Subtotal</h6>
-                  <h6 class="font-weight-medium">Php</h6>
+              <div className="card-body">
+                <div className="d-flex justify-content-between mb-3 pt-1">
+                  <h6 className="font-weight-medium">Subtotal</h6>
+                  <h6 className="font-weight-medium">Php</h6>
                 </div>
-                <div class="d-flex justify-content-between">
-                  <h6 class="font-weight-medium">Shipping</h6>
-                  <h6 class="font-weight-medium">Php</h6>
+                <div className="d-flex justify-content-between">
+                  <h6 className="font-weight-medium">Shipping</h6>
+                  <h6 className="font-weight-medium">Php</h6>
                 </div>
               </div>
-              <div class="card-footer border-secondary bg-transparent">
-                <div class="d-flex justify-content-between mt-2">
-                  <h5 class="font-weight-bold">Total</h5>
-                  <h5 class="font-weight-bold">Php</h5>
+              <div className="card-footer border-secondary bg-transparent">
+                <div className="d-flex justify-content-between mt-2">
+                  <h5 className="font-weight-bold">Total</h5>
+                  <h5 className="font-weight-bold">Php</h5>
                 </div>
-                <a class="text-decoration-none" href="checkout.html">
-                  <button class="btn btn-block bg-primary text-light my-3 py-3">
+                <a className="text-decoration-none" href="checkout.html">
+                  <button className="btn btn-block bg-primary text-light my-3 py-3">
                     Proceed To Checkout
                   </button>
                 </a>
