@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoginSpace = () => {
+const AdminLoginPage = () => {
   return (
     <main className="form-signin w-100 m-auto text-center">
       <form className="formLogin">
@@ -36,12 +36,12 @@ const LoginSpace = () => {
           </label>
         </div>
         <button className="w-50 btn btn-lg btn-primary" type="submit">
-            Sign in
-          </button>
+          Sign in
+        </button>
 
         <p className="mt-5 mb-3 text-muted">&copy; 2022–2023</p>
       </form>
     </main>
   );
 };
-export default LoginSpace;
+export default AdminLoginPage;

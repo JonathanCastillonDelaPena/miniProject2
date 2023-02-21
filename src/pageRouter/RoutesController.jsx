@@ -1,12 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import NotFoundWarningPage from "../../pages/NotFoundWarningPage";
-import HomePage from "../../pages/HomePage";
-import ShopPage from "../../pages/ShopPage";
-import ContactUsPage from "../../pages/ContactUsPage";
-import Dashboard from "../../../adminSide/components/Dashboard";
-import CustomerInfo from "../../../adminSide/components/CustomerInfo";
-import TestPage from "../../pages/TestPage/TestPage";
+import NotFoundWarningPage from "../clientSide/pages/NotFoundWarningPage";
+import HomePage from "../clientSide/pages/HomePage";
+import ShopPage from "../clientSide/pages/ShopPage";
+import ContactUsPage from "../clientSide/pages/ContactUsPage";
+import AdminLoginPage from "../adminSide/pages/AdminLoginPage";
+import Dashboard from "../adminSide/components/Dashboard";
+import CustomerInfo from "../adminSide/components/CustomerInfo";
+import TestPage from "../clientSide/pages/TestPage/TestPage";
 
 const RoutesController = () => {
   return (
@@ -17,7 +18,7 @@ const RoutesController = () => {
       <Route path="/shop" element={<ShopPage />} />
       <Route path="/contact" element={<ContactUsPage />} />
       {/* Temporary Linking to the Admin Side */}
-      <Route path="/admin" element={<Dashboard />} />
+      <Route path="/admin" element={<AdminLoginPage />} />
       <Route path="/admin/customer" element={<CustomerInfo />} />
 
       {/* Testing Page */}
