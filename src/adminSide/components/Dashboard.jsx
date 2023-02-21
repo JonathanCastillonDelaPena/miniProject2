@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 import Chart from "./Chart";
 import Calendar from "../components/Calendar";
 import NavBar from "./NavBar";
-import ProductDetails from "./Product Details";
+import ProductDetails from "./ProductDetails";
 
 const Dashboard = () => {
   return (

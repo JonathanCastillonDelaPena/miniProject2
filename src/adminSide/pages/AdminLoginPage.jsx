@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AdminLoginPage = () => {
   return (
@@ -16,16 +17,16 @@ const AdminLoginPage = () => {
             type="email"
             className="form-control border-dark"
             id="floatingInput"
-            placeholder="name@example.com"
+            placeholder=""
           />
-          <label>Email address</label>
+          <label>Username</label>
         </div>
         <div className="form-floating">
           <input
             type="password"
             className="form-control border-dark"
             id="floatingPassword"
-            placeholder="Password"
+            placeholder=""
           />
           <label>Password</label>
         </div>
@@ -35,9 +36,9 @@ const AdminLoginPage = () => {
             <input type="checkbox" value="remember-me" /> Remember me
           </label>
         </div>
-        <button className="w-50 btn btn-lg btn-primary" type="submit">
-          Sign in
-        </button>
+        <Link to={"/admin/dashboard"}>
+          <button className="w-50 btn btn-lg btn-primary">Sign in</button>
+        </Link>
 
         <p className="mt-5 mb-3 text-muted">&copy; 2022–2023</p>
       </form>

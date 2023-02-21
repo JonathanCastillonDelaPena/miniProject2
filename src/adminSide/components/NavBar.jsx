@@ -8,10 +8,10 @@ const NavBar = () => {
         <Link to={"/home"}>
           <i className="fa fa-home">Temporary Client Side</i>
         </Link>
-        <Link to={"/admin"}>
+        <Link to={"/admin/dashboard"}>
           <i className="fa fa-home">Dashboard</i>
         </Link>
-        <Link to={"/admin/customer"}>
+        <Link to={"/admin/dashboard/customer"}>
           <i className="fa fa-home">Customer Info</i>
         </Link>
       </div>
