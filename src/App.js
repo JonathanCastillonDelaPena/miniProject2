@@ -1,19 +1,12 @@
 import "./clientSide/css/App.css";
-import "./adminSide/css/Login.css"
+import "./adminSide/css/Login.css";
 import { BrowserRouter } from "react-router-dom";
-// import RoutesController from "./clientSide/components/pageRouter/RoutesController";
-// import Dashboard from "./adminSide/components/Dashboard";
-import Cart from "./adminSide/components/Cart";
-
-
-
+import RoutesController from "./clientSide/components/pageRouter/RoutesController";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <RoutesController /> */}
-   {/* <Dashboard/> */}
-   <Cart/>
+      <RoutesController />
     </BrowserRouter>
   );
 }

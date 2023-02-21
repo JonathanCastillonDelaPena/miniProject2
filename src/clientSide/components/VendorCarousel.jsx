@@ -10,57 +10,53 @@ import img20 from "../images/Milk8.jpg";
 import img21 from "../images/PHY1.jpg";
 import img22 from "../images/d6.jpg";
 import img23 from "../images/S5.jpg";
-import img4 from "../images/C1.jpg";
+import img4 from "../images/C2.jpg";
 import img5 from "../images/d1.jpg";
 import img6 from "../images/Milk1.jpg";
 
 function VendorCarousel() {
   return (
-    <Carousel showThumbs={false}
-      showArrows={false} autoPlay={true}> 
- 
-        <div className="row">
-        
-              <div className="col-2">
-                <img src={img15} alt="match" />
-              </div>
-              <div className="col-2">
-                <img src={img16} alt="fudgee bar" />
-              </div>
-              <div className="col-2">
-                <img src={img17} alt="alaxan" />
-              </div>
-              <div className="col-2">
-                <img src={img18} alt="alcohol" />
-              </div>
-              <div className="col">
-                <img src={img19} alt="baygon" />
-              </div>
-              <div className="vendor-item border p-4">
-                <img src={img20} alt="great taste coffee" />
-              </div>
-        </div>
-        <div className="row">
+    <Carousel showThumbs={false} showArrows={false} autoPlay={true}>
+      <div className="row">
         <div className="col-2">
-                <img src={img21} alt="head&shoulder" />
-              </div>
-              <div className="col-2">
-                <img src={img22} alt="axion calamansi" />
-              </div>
-              <div className="col-2">
-                <img src={img23} alt="boy bawang garlic" />
-              </div>
-              <div className="col-2">
-                <img src={img4} alt="ginisa mix" />
-              </div>
-              <div className="col-2">
-                <img src={img5} alt="ariel downy" />
-              </div>
-              <div className="col-2">
-                <img src={img6} alt="bear brand milk" />
-              </div>
+          <img src={img15} alt="match" />
         </div>
-  
+        <div className="col-2">
+          <img src={img16} alt="fudgee bar" />
+        </div>
+        <div className="col-2">
+          <img src={img17} alt="alaxan" />
+        </div>
+        <div className="col-2">
+          <img src={img18} alt="alcohol" />
+        </div>
+        <div className="col">
+          <img src={img19} alt="baygon" />
+        </div>
+        <div className="vendor-item border p-4">
+          <img src={img20} alt="great taste coffee" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-2">
+          <img src={img21} alt="head&shoulder" />
+        </div>
+        <div className="col-2">
+          <img src={img22} alt="axion calamansi" />
+        </div>
+        <div className="col-2">
+          <img src={img23} alt="boy bawang garlic" />
+        </div>
+        <div className="col-2">
+          <img src={img4} alt="ginisa mix" />
+        </div>
+        <div className="col-2">
+          <img src={img5} alt="ariel downy" />
+        </div>
+        <div className="col-2">
+          <img src={img6} alt="bear brand milk" />
+        </div>
+      </div>
     </Carousel>
   );
 }
