@@ -1,4 +1,4 @@
-import serverURI from "../dbServerURI";
+import serverURI from "./dbServerURI";
 const testBaseURL = "/testingPage";
 
 const getAll = () => {

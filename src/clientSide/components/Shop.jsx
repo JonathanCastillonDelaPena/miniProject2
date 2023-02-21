@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import ProductDataService from "../dataServices/productDataService";
+import ProductDataService from "../../dataServices/productDataService";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
