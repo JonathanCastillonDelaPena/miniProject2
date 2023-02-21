@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Chart from "./Chart";
+import Sidebar from "../components/Sidebar";
+import Chart from "../components/Chart";
 import Calendar from "../components/Calendar";
-import NavBar from "./NavBar";
-import ProductDetails from "./ProductDetails";
+import NavBar from "../components/NavBar";
+import ProductDashboard from "../components/ProductDashboard";
 
-const Dashboard = () => {
+const AdminDashboardPage = () => {
   return (
     <div>
       <Sidebar />
@@ -17,7 +17,7 @@ const Dashboard = () => {
         <div className="row">
           <div className="col-8">
             {" "}
-            <ProductDetails />
+            <ProductDashboard />
           </div>
           <div className="col-4">
             {" "}
@@ -35,4 +35,4 @@ const Dashboard = () => {
     </div>
   );
 };
-export default Dashboard;
+export default AdminDashboardPage;

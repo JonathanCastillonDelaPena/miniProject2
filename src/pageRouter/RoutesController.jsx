@@ -11,9 +11,9 @@ import ContactUsPage from "../clientSide/pages/ContactUsPage";
 
 // Admin Side
 import AdminLoginPage from "../adminSide/pages/AdminLoginPage";
-import Dashboard from "../adminSide/components/Dashboard";
+import AdminDashboardPage from "../adminSide/pages/AdminDashboardPage";
 import CustomerInfo from "../adminSide/pages/CustomerInfoPage";
-import ProfilePage from "../adminSide/pages/ProfilePage";
+import Cart from "../adminSide/components/Cart";
 
 const RoutesController = () => {
   return (
@@ -28,12 +28,12 @@ const RoutesController = () => {
 
       {/* Admin Side Routes */}
       <Route path="/admin" element={<AdminLoginPage />} />
-      <Route path="/admin/dashboard" element={<Dashboard />} />
+      <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
       <Route path="/admin/dashboard/customer" element={<CustomerInfo />} />
 
       {/* Testing Page */}
       <Route path="/testingPage" element={<TestPage />} />
-      <Route path="/view" element={<ProfilePage />} />
+      <Route path="/view" element={<Cart />} />
     </Routes>
   );
 };
