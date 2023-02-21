@@ -23,12 +23,12 @@ const Sidebar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <input
+        {/* <input
           className="form-control form-control-light w-25 rounded-0 border-0"
           type="text"
           placeholder="Search"
           aria-label="Search"
-        />
+        /> */}
         <div className="navbar-nav">
           <div className="nav-item text-nowrap">
             <Link className="nav-link px-5 text-light" to={"/admin"}>
