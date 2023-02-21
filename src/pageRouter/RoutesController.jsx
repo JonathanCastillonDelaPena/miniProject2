@@ -13,6 +13,7 @@ import ContactUsPage from "../clientSide/pages/ContactUsPage";
 import AdminLoginPage from "../adminSide/pages/AdminLoginPage";
 import Dashboard from "../adminSide/components/Dashboard";
 import CustomerInfo from "../adminSide/components/CustomerInfo";
+import Orders from "../adminSide/pages/OrdersPage";
 
 const RoutesController = () => {
   return (
@@ -32,7 +33,7 @@ const RoutesController = () => {
 
       {/* Testing Page */}
       <Route path="/testingPage" element={<TestPage />} />
-      <Route path="/view" element={<TestPage />} />
+      <Route path="/view" element={<Orders />} />
     </Routes>
   );
 };
