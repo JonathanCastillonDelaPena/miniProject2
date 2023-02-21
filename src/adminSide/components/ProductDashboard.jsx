@@ -4,7 +4,7 @@ import React from "react";
 const ProductDashboard = () => {
   return (
     <div>
-      <h2>Products</h2>
+      <h2>Product Lists</h2>
       <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>

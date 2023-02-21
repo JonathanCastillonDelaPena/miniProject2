@@ -1,8 +1,8 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import Chart from "./Chart";
-import ProductDashboard from "./ProductDashboard";
 import Calendar from "../components/Calendar";
+import ProductDetails from "./Product Details";
 
 const Dashboard = () => {
   return (
@@ -15,8 +15,8 @@ const Dashboard = () => {
         </div>
         <div className="row">
           <div className="col-8">
-            {" "}
-            <ProductDashboard />
+          {" "}
+            <ProductDetails/>
           </div>
           <div className="col-4">
             {" "}
