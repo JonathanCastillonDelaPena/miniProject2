@@ -12,7 +12,7 @@ import ContactUsPage from "../clientSide/pages/ContactUsPage";
 import AdminLoginPage from "../adminSide/pages/AdminLoginPage";
 import AdminDashboardPage from "../adminSide/pages/AdminDashboardPage";
 import CustomerInfo from "../adminSide/pages/CustomerInfoPage";
-import ProductDetails from "../adminSide/components/ProductDetails";
+import ShopCart from "../clientSide/components/shop/ShopCart";
 
 const RoutesController = () => {
   return (
@@ -23,6 +23,7 @@ const RoutesController = () => {
       {/* Client Side Routes */}
       <Route path="/home" element={<HomePage />} />
       <Route path="/shop" element={<ShopPage />} />
+      <Route path="/shop/cart" element={<ShopCart />} />
       <Route path="/contact" element={<ContactUsPage />} />
 
       {/* Admin Side Routes */}
@@ -31,7 +32,7 @@ const RoutesController = () => {
       <Route path="/admin/dashboard/customer" element={<CustomerInfo />} />
 
       {/* Testing Route */}
-      <Route path="/view" element={<ProductDetails />} />
+      <Route path="/view" element={<ShopCart />} />
     </Routes>
   );
 };

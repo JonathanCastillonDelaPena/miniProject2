@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-function Top(){
-    return(
-        <div>
-                  <div className="top row py-2 px-xl-5">
+function Top() {
+  return (
+    <div>
+      <div className="top row py-2 px-xl-5">
         <div className="col-lg-6 d-none d-lg-block">
           <div className="d-inline-flex align-items-center">
             <a className="text-dark" href="#faq">
@@ -77,10 +77,8 @@ function Top(){
           </a>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 }
-
-
 
 export default Top;

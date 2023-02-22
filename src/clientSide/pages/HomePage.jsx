@@ -14,17 +14,15 @@ const HomePage = () => {
   return (
     <div>
       <NavBar />
-      <div className="container">
-        <Top />
-        <Carousel />
-        <FeaturedSection />
-        <ProductCards />
-        <OfferSection />
-        <BestProducts />
-        <Subscribe />
-        <VendorCarousel />
-        <Footer />
-      </div>
+      <Top />
+      <Carousel />
+      <FeaturedSection />
+      <ProductCards />
+      <OfferSection />
+      <BestProducts />
+      <Subscribe />
+      <VendorCarousel />
+      <Footer />
     </div>
   );
 };

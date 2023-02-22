@@ -15,7 +15,7 @@ function Carousel() {
           className="carousel-item active"
           data-bs-interval="10000"
         >
-          <img style={{width:1110}} className="img-fluid" src={img} alt="Imagesarisari" />
+          <img  className="img-fluid" src={img} alt="Imagesarisari" />
 
           <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div className="p-3">
