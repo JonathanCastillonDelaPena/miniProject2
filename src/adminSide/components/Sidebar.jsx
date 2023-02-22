@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className="sticky-top">
       <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a className="navbar-brand col-md-3 col-lg-2 " href="/">
           <h1 className=" font-weight-semi-bold">
@@ -22,17 +23,17 @@ const Sidebar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <input
+        {/* <input
           className="form-control form-control-light w-25 rounded-0 border-0"
           type="text"
           placeholder="Search"
           aria-label="Search"
-        />
+        /> */}
         <div className="navbar-nav">
           <div className="nav-item text-nowrap">
-            <a className="nav-link px-5 text-light" href="/">
+            <Link className="nav-link px-5 text-light" to={"/admin"}>
               Sign out
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -61,14 +62,27 @@ const Sidebar = () => {
                 Orders
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                <span
-                  data-feather="shopping-cart"
-                  className="align-text-bottom"
-                ></span>
+
+            <li className="nav-item dropdown">
+              <button
+                className="btn dropdown-toggle border-0 text-dark"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Products
-              </a>
+              </button>
+              <ul className="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Product List
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Product Details
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
