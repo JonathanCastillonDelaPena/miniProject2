@@ -1,7 +1,7 @@
 import "./clientSide/css/App.css";
 import "./adminSide/css/Login.css";
 import { BrowserRouter } from "react-router-dom";
-import RoutesController from "./clientSide/components/pageRouter/RoutesController";
+import RoutesController from "./pageRouter/RoutesController";
 
 function App() {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Chart from "./Chart";
-import ProductDashboard from "./ProductDashboard";
+import Sidebar from "../components/Sidebar";
+import Chart from "../components/Chart";
 import Calendar from "../components/Calendar";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
+import ProductDashboard from "../components/ProductDashboard";
 
-const Dashboard = () => {
+const AdminDashboardPage = () => {
   return (
     <div>
       <Sidebar />
@@ -35,4 +35,4 @@ const Dashboard = () => {
     </div>
   );
 };
-export default Dashboard;
+export default AdminDashboardPage;
