@@ -7,14 +7,27 @@ import ProductForm from "./ProductForm";
 const ProductDashboard = () => {
   const [products, setProducts] = useState([]);
   const [modalData, setModalData] = useState({});
+  const [modalEditData, setModalEditData] = useState({});
 
   let displayProducts = <></>;
 
-  const deleteProduct = (id) => {
-    ProductDataService.remove(id).then((response) => {
-      alert(response.data.message);
-      retrieveProducts();
-    });
+  const handleEditInputChange = (event) => {
+    const { name, value } = event.target;
+    setModalEditData({ ...modalEditData, [name]: value });
+  };
+
+  const handleSubmitEdit = (event) => {
+    event.preventDefault();
+    ProductDataService.update(modalEditData._id, modalEditData).then(
+      (response) => {
+        alert(response.data.message);
+        retrieveProducts();
+      }
+    );
+  };
+
+  const forwardModalDataToEdit = () => {
+    setModalEditData(modalData);
   };
 
   const retrieveProducts = () => {
@@ -28,6 +41,15 @@ const ProductDashboard = () => {
         console.log(`\nFailed to get Products`);
       });
   };
+
+  const deleteProduct = (id) => {
+    ProductDataService.remove(id).then((response) => {
+      alert(response.data.message);
+      retrieveProducts();
+    });
+  };
+
+  const saveEdit = () => {};
 
   const viewDetails = (product) => {
     setModalData(product);
@@ -101,7 +123,13 @@ const ProductDashboard = () => {
                 >
                   Details
                 </button>
-                <button type="button" className="btn btn-warning">
+                <button
+                  data-bs-toggle="modal"
+                  data-bs-target="#productDetailsEditModal"
+                  type="button"
+                  className="btn btn-warning"
+                  onClick={forwardModalDataToEdit}
+                >
                   Edit
                 </button>
               </div>
@@ -191,9 +219,130 @@ const ProductDashboard = () => {
                 >
                   Back
                 </button>
-                <button type="button" className="btn btn-warning">
+                <button
+                  data-bs-toggle="modal"
+                  data-bs-target="#productDetailsEditModal"
+                  type="button"
+                  className="btn btn-warning"
+                  onClick={forwardModalDataToEdit}
+                >
                   Edit
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+
+      {/* Edit Product Modal */}
+      <>
+        <div class="modal fade" id="productDetailsEditModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5">Edit Product Details</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form onSubmit={handleSubmitEdit} className="form-group">
+                  <div className="form-floating">
+                    <input
+                      required
+                      type="text"
+                      className="form-control"
+                      placeholder=""
+                      id="name"
+                      name="name"
+                      value={modalEditData.name}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Product Name</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      required
+                      type="number"
+                      min={0}
+                      className="form-control"
+                      placeholder=""
+                      id="price"
+                      name="price"
+                      value={modalEditData.price}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Price</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      required
+                      type="number"
+                      min={0}
+                      className="form-control"
+                      placeholder=""
+                      id="discount"
+                      name="discount"
+                      value={modalEditData.discount}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Discount</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      required
+                      type="number"
+                      min={1}
+                      className="form-control"
+                      placeholder=""
+                      id="stock"
+                      name="stock"
+                      value={modalEditData.stock}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Stock</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      required
+                      type="text"
+                      className="form-control"
+                      placeholder=""
+                      id="category"
+                      name="category"
+                      value={modalEditData.category}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Category</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder=""
+                      id="description"
+                      name="description"
+                      value={modalEditData.description}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Description</label>
+                  </div>
+                  <div className="d-flex justify-content-between mt-3">
+                    <button
+                      data-bs-dismiss="modal"
+                      type="button"
+                      className="btn btn-secondary"
+                    >
+                      Cancel
+                    </button>
+                    <button type="submit" className="btn btn-success">
+                      Save
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
