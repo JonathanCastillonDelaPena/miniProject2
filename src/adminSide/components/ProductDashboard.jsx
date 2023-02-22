@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ProductDataService from "../../dataServices/productDataService";
 import ProductCard from "./ProductCard";
+import ProductForm from "./ProductForm";
 
 const ProductDashboard = () => {
   const [products, setProducts] = useState([]);
@@ -48,8 +49,18 @@ const ProductDashboard = () => {
 
   return (
     <div>
-      <h2>Product Lists</h2>
+      <div className="d-flex flex-row">
+        <h2>Product Lists</h2>
+        <button
+          className="btn btn-success px-2 p-0 mb-2 ms-auto"
+          data-bs-toggle="modal"
+          data-bs-target="#addProductModal"
+        >
+          Add Product
+        </button>
+      </div>
 
+      {/* Product Details Modal */}
       <>
         <div class="modal fade" id="productDetailsModal">
           <div class="modal-dialog">
@@ -66,17 +77,27 @@ const ProductDashboard = () => {
               <div class="modal-body">
                 <ProductCard product={modalData} />
               </div>
-              <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </>
+
+      {/* Add Product Modal */}
+      <>
+        <div class="modal fade" id="addProductModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5">Add Product</h1>
                 <button
                   type="button"
-                  class="btn btn-secondary"
+                  class="btn-close"
                   data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <ProductForm />
               </div>
             </div>
           </div>
