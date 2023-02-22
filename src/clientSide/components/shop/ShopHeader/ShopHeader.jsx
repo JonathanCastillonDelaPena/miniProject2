@@ -19,7 +19,7 @@ function ShopHeader({ Snacks, setFilteredSnacks, setSnacksSearched }) {
   return (
     <Header>
       <div className="col-lg-6 d-none d-lg-block">
-        <a href="index.html" className="text-decoration-none">
+        <a href="/" className="text-decoration-none">
           <h1 className="m-0 display-5 font-weight-semi-bold">
             <span className="text-primary font-weight-bold border px-3 mr-1">
               VARATILYO
