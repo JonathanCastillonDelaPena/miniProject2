@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ProductDataService from "../../dataServices/productDataService";
 
-const ProductForm = () => {
+const ProductForm = ({ refreshProductDisplay }) => {
   const initialState = {
     name: "",
     price: 0,
@@ -28,6 +28,7 @@ const ProductForm = () => {
       .then((response) => {
         console.log(response.data);
         setProduct(initialState);
+        refreshProductDisplay();
         alert("Product Added!");
       })
       .catch((err) => {
@@ -118,11 +119,11 @@ const ProductForm = () => {
         <label>Description</label>
       </div>
       <div className="d-flex justify-content-between">
-        <button type="submit" className="btn btn-success mt-3">
-          Add
-        </button>
         <button type="reset" className="btn btn-secondary mt-3">
           Clear
+        </button>
+        <button type="submit" className="btn btn-success mt-3">
+          Add
         </button>
       </div>
     </form>

@@ -364,7 +364,7 @@ const ProductDashboard = () => {
                 ></button>
               </div>
               <div class="modal-body">
-                <ProductForm />
+                <ProductForm refreshProductDisplay={retrieveProducts} />
               </div>
             </div>
           </div>
