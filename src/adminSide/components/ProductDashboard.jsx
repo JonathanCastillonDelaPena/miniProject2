@@ -93,8 +93,103 @@ const ProductDashboard = () => {
                 >
                   Delete
                 </button>
-                <button type="button" className="btn btn-info">
+                <button
+                  data-bs-toggle="modal"
+                  data-bs-target="#productFullDetailsModal"
+                  type="button"
+                  className="btn btn-info"
+                >
                   Details
+                </button>
+                <button type="button" className="btn btn-warning">
+                  Edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+
+      {/* Full Product Details Modal */}
+      <>
+        <div class="modal fade" id="productFullDetailsModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5">Product Details</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div className="form-group">
+                  <div className="form-floating">
+                    <input
+                      readOnly
+                      type="text"
+                      className="form-control"
+                      value={modalData.name}
+                    />
+                    <label>Product Name</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      readOnly
+                      type="text"
+                      className="form-control"
+                      value={modalData.price}
+                    />
+                    <label>Price (Php)</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      readOnly
+                      type="text"
+                      className="form-control"
+                      value={modalData.discount}
+                    />
+                    <label>Discount (%)</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      readOnly
+                      type="text"
+                      className="form-control"
+                      value={modalData.stock}
+                    />
+                    <label>Stock</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      readOnly
+                      type="text"
+                      className="form-control"
+                      value={modalData.category}
+                    />
+                    <label>Category</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      readOnly
+                      type="text"
+                      className="form-control"
+                      value={modalData.description}
+                    />
+                    <label>Description</label>
+                  </div>
+                </div>
+              </div>
+              <div className="modal-footer d-flex justify-content-between">
+                <button
+                  data-bs-toggle="modal"
+                  data-bs-target="#productDetailsModal"
+                  type="button"
+                  className="btn btn-secondary"
+                >
+                  Back
                 </button>
                 <button type="button" className="btn btn-warning">
                   Edit
