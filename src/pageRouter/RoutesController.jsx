@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import NotFoundWarningPage from "../clientSide/pages/NotFoundWarningPage";
-import TestPage from "../clientSide/pages/TestPage/TestPage";
 
 // Client Side
 import HomePage from "../clientSide/pages/HomePage";
@@ -31,8 +30,7 @@ const RoutesController = () => {
       <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
       <Route path="/admin/dashboard/customer" element={<CustomerInfo />} />
 
-      {/* Testing Page */}
-      <Route path="/testingPage" element={<TestPage />} />
+      {/* Testing Route */}
       <Route path="/view" element={<Cart />} />
     </Routes>
   );
