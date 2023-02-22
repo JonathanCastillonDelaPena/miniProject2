@@ -126,7 +126,7 @@ const Shop = () => {
                     className="dropdown-menu dropdown-menu-right"
                     aria-labelledby="triggerId"
                   >
-                    <a className="dropdown-item" href="#">Latest</a>
+                    <a className="dropdown-item" href="shopPage">Latest</a>
                     <a className="dropdown-item" href="#">Popularity</a>
                     <a className="dropdown-item" href="#">Best Rating</a>
                   </div>
