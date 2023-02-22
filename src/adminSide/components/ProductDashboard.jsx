@@ -49,8 +49,6 @@ const ProductDashboard = () => {
     });
   };
 
-  const saveEdit = () => {};
-
   const viewDetails = (product) => {
     setModalData(product);
   };
