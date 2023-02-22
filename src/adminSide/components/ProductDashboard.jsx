@@ -10,6 +10,13 @@ const ProductDashboard = () => {
 
   let displayProducts = <></>;
 
+  const deleteProduct = (id) => {
+    ProductDataService.remove(id).then((response) => {
+      alert(response.data.message);
+      retrieveProducts();
+    });
+  };
+
   const retrieveProducts = () => {
     ProductDataService.getAll()
       .then((response) => {
@@ -76,6 +83,22 @@ const ProductDashboard = () => {
               </div>
               <div class="modal-body">
                 <ProductCard product={modalData} />
+              </div>
+              <div className="modal-footer d-flex justify-content-between">
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  data-bs-dismiss="modal"
+                  onClick={() => deleteProduct(modalData._id)}
+                >
+                  Delete
+                </button>
+                <button type="button" className="btn btn-info">
+                  Details
+                </button>
+                <button type="button" className="btn btn-warning">
+                  Edit
+                </button>
               </div>
             </div>
           </div>

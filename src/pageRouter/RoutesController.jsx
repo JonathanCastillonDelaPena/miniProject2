@@ -12,7 +12,7 @@ import ContactUsPage from "../clientSide/pages/ContactUsPage";
 import AdminLoginPage from "../adminSide/pages/AdminLoginPage";
 import AdminDashboardPage from "../adminSide/pages/AdminDashboardPage";
 import CustomerInfo from "../adminSide/pages/CustomerInfoPage";
-import Cart from "../adminSide/components/Cart";
+import ProductDetails from "../adminSide/components/ProductDetails";
 
 const RoutesController = () => {
   return (
@@ -31,7 +31,7 @@ const RoutesController = () => {
       <Route path="/admin/dashboard/customer" element={<CustomerInfo />} />
 
       {/* Testing Route */}
-      <Route path="/view" element={<Cart />} />
+      <Route path="/view" element={<ProductDetails />} />
     </Routes>
   );
 };
