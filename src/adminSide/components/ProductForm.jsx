@@ -23,6 +23,10 @@ const ProductForm = ({ refreshProductDisplay }) => {
     setProduct({ ...product, [name]: value });
   };
 
+  const resetInputs = () => {
+    setProduct(initialState);
+  };
+
   const addProduct = () => {
     ProductDataService.create(product)
       .then((response) => {
@@ -106,9 +110,8 @@ const ProductForm = ({ refreshProductDisplay }) => {
         />
         <label>Category</label>
       </div>
-      <div className="form-floating">
-        <input
-          type="text"
+      <div className="form-floating h-25">
+        <textarea
           className="form-control"
           placeholder=""
           id="description"
@@ -119,7 +122,11 @@ const ProductForm = ({ refreshProductDisplay }) => {
         <label>Description</label>
       </div>
       <div className="d-flex justify-content-between">
-        <button type="reset" className="btn btn-secondary mt-3">
+        <button
+          type="button"
+          className="btn btn-secondary mt-3"
+          onClick={resetInputs}
+        >
           Clear
         </button>
         <button type="submit" className="btn btn-success mt-3">

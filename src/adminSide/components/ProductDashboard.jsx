@@ -199,8 +199,8 @@ const ProductDashboard = () => {
                     />
                     <label>Category</label>
                   </div>
-                  <div className="form-floating">
-                    <input
+                  <div className="form-floating h-25">
+                    <textarea
                       readOnly
                       type="text"
                       className="form-control"
@@ -318,8 +318,8 @@ const ProductDashboard = () => {
                     />
                     <label>Category</label>
                   </div>
-                  <div className="form-floating">
-                    <input
+                  <div className="form-floating h-25">
+                    <textarea
                       type="text"
                       className="form-control"
                       placeholder=""
