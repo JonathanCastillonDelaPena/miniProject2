@@ -1,6 +1,5 @@
 import React from "react";
-import ProductDashboard from "./ProductDashboard"
-
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -24,17 +23,17 @@ const Sidebar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <input
+        {/* <input
           className="form-control form-control-light w-25 rounded-0 border-0"
           type="text"
           placeholder="Search"
           aria-label="Search"
-        />
+        /> */}
         <div className="navbar-nav">
           <div className="nav-item text-nowrap">
-            <a className="nav-link px-5 text-light" href="/">
+            <Link className="nav-link px-5 text-light" to={"/admin"}>
               Sign out
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -63,14 +62,26 @@ const Sidebar = () => {
                 Orders
               </a>
             </li>
-            
+
             <li className="nav-item dropdown">
-              <button className="btn dropdown-toggle border-0 text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+              <button
+                className="btn dropdown-toggle border-0 text-dark"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Products
               </button>
               <ul className="dropdown-menu dropdown-menu-dark">
-                <li><a className="dropdown-item" href={<ProductDashboard/>}>Product List</a></li>
-                <li><a className="dropdown-item" href="/">Product Details</a></li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Product List
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Product Details
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="nav-item">

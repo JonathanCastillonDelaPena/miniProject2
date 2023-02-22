@@ -1,10 +1,10 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Chart from "./Chart";
+import Sidebar from "../components/Sidebar";
+import Chart from "../components/Chart";
 import Calendar from "../components/Calendar";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 
-const CustomerInfo = () => {
+const CustomerInfoPage = () => {
   return (
     <div>
       <Sidebar />
@@ -75,4 +75,4 @@ const CustomerInfo = () => {
     </div>
   );
 };
-export default CustomerInfo;
+export default CustomerInfoPage;

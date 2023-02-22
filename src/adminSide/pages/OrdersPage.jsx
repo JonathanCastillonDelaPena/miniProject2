@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Chart from "./Chart";
+import Sidebar from "../components/Sidebar";
+import Chart from "../components/Chart";
 import Calendar from "../components/Calendar";
 
-const Order = () => {
+const OrdersPage = () => {
   return (
     <div>
       <Sidebar />
@@ -85,4 +85,4 @@ const Order = () => {
     </div>
   );
 };
-export default Order;
+export default OrdersPage;

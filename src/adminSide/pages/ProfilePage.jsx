@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Chart from "./Chart";
+import Sidebar from "../components/Sidebar";
+import Chart from "../components/Chart";
 import Calendar from "../components/Calendar";
 
-const Profile = () => {
+const ProfilePage = () => {
   return (
     <div>
       <Sidebar />
@@ -129,7 +129,10 @@ const Profile = () => {
                   >
                     Edit Profile
                   </button>
-                  <button className="btn btn-primary profile-button" type="button">
+                  <button
+                    className="btn btn-primary profile-button"
+                    type="button"
+                  >
                     Save Profile
                   </button>
                 </div>
@@ -151,4 +154,4 @@ const Profile = () => {
     </div>
   );
 };
-export default Profile;
+export default ProfilePage;
