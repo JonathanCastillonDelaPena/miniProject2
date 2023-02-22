@@ -6,7 +6,7 @@ export const Header = styled.header`
   padding: 0% 10%;
   justify-content: space-between;
   height: 80px;
-  width:100%;
+  width: 100%;
   background-color: #f5f5f5;
   align-items: center;
   margin-bottom: 50px;
@@ -34,7 +34,7 @@ export const Header = styled.header`
     }
 
     button:hover {
-      background-color:#CF4DCE;
+      background-color: #cf4dce;
       transition: all 500ms;
     }
     input {
