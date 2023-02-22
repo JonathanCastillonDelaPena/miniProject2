@@ -266,6 +266,19 @@ const ProductDashboard = () => {
                   <div className="form-floating">
                     <input
                       required
+                      type="text"
+                      className="form-control"
+                      placeholder=""
+                      id="imageLink"
+                      name="imageLink"
+                      value={modalEditData.imageLink}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Image Link</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      required
                       type="number"
                       min={0}
                       className="form-control"
