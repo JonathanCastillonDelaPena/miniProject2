@@ -49,8 +49,6 @@ const ProductDashboard = () => {
     });
   };
 
-  const saveEdit = () => {};
-
   const viewDetails = (product) => {
     setModalData(product);
   };
@@ -262,6 +260,19 @@ const ProductDashboard = () => {
                       onChange={handleEditInputChange}
                     />
                     <label>Product Name</label>
+                  </div>
+                  <div className="form-floating">
+                    <input
+                      required
+                      type="text"
+                      className="form-control"
+                      placeholder=""
+                      id="imageLink"
+                      name="imageLink"
+                      value={modalEditData.imageLink}
+                      onChange={handleEditInputChange}
+                    />
+                    <label>Image Link</label>
                   </div>
                   <div className="form-floating">
                     <input

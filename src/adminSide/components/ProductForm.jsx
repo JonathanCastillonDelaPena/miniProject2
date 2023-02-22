@@ -5,6 +5,7 @@ import ProductDataService from "../../dataServices/productDataService";
 const ProductForm = ({ refreshProductDisplay }) => {
   const initialState = {
     name: "",
+    imageLink: "",
     price: 0,
     discount: 0,
     stock: 0,
@@ -54,6 +55,19 @@ const ProductForm = ({ refreshProductDisplay }) => {
           onChange={handleInputChange}
         />
         <label>Product Name</label>
+      </div>
+      <div className="form-floating">
+        <input
+          required
+          type="text"
+          className="form-control"
+          placeholder=""
+          id="imageLink"
+          name="imageLink"
+          value={product.imageLink}
+          onChange={handleInputChange}
+        />
+        <label>Image Link</label>
       </div>
       <div className="form-floating">
         <input

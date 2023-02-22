@@ -3,8 +3,13 @@ import { useState, useEffect } from "react";
 import ProductDataService from "../../dataServices/productDataService";
 
 const Shop = () => {
+  const [modalData, setModalData] = useState({});
   const [products, setProducts] = useState([]);
   let displayProducts = <></>;
+
+  const viewDetails = (product) => {
+    setModalData(product);
+  };
 
   const retrieveProducts = () => {
     ProductDataService.getAll()
@@ -41,12 +46,88 @@ const Shop = () => {
 
       return (
         <div className="col-lg-4 col-md-6 col-sm-12 pb-1">
+          {/* Full Product Details Modal */}
+          <>
+            <div class="modal fade" id="productFullDetailsModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5">Product Details</h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div className="form-group">
+                      <div className="form-floating">
+                        <input
+                          readOnly
+                          type="text"
+                          className="form-control"
+                          value={modalData.name}
+                        />
+                        <label>Product Name</label>
+                      </div>
+                      <div className="form-floating">
+                        <input
+                          readOnly
+                          type="text"
+                          className="form-control"
+                          value={modalData.price}
+                        />
+                        <label>Price (Php)</label>
+                      </div>
+                      <div className="form-floating">
+                        <input
+                          readOnly
+                          type="text"
+                          className="form-control"
+                          value={modalData.discount}
+                        />
+                        <label>Discount (%)</label>
+                      </div>
+                      <div className="form-floating">
+                        <input
+                          readOnly
+                          type="text"
+                          className="form-control"
+                          value={modalData.stock}
+                        />
+                        <label>Stock</label>
+                      </div>
+                      <div className="form-floating">
+                        <input
+                          readOnly
+                          type="text"
+                          className="form-control"
+                          value={modalData.category}
+                        />
+                        <label>Category</label>
+                      </div>
+                      <div className="form-floating h-25">
+                        <textarea
+                          readOnly
+                          type="text"
+                          className="form-control"
+                          value={modalData.description}
+                        />
+                        <label>Description</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
           <div className="card product-item border-0 mb-4">
             <div className="card-header product-img position-relative overflow-hidden bg-transparent border p-0 text-center">
               <img
                 style={{ height: 200 }}
                 className="img-fluid"
-                // src={img1}
+                src={product.imageLink}
                 alt={product.name + " Image"}
               />
             </div>
@@ -57,9 +138,14 @@ const Shop = () => {
               </div>
             </div>
             <div className="card-footer d-flex justify-content-between bg-light border">
-              <a href="#" className="btn btn-sm text-dark p-0">
+              <div
+                data-bs-toggle="modal"
+                data-bs-target="#productFullDetailsModal"
+                className="btn btn-sm text-dark p-0"
+                onClick={() => viewDetails(product)}
+              >
                 <i className="fas fa-eye text-primary mr-1"></i>View Detail
-              </a>
+              </div>
               <a href="#" className="btn btn-sm text-dark p-0">
                 <i className="fas fa-shopping-cart text-primary mr-1"></i>
                 Add To Cart

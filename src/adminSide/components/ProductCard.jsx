@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
         <img
           style={{ height: 200 }}
           className="img-fluid"
-          // src={img1}
+          src={product.imageLink}
           alt={product.name + " Image"}
         />
       </div>
