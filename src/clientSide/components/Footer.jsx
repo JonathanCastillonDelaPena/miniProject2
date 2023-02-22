@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="container-fluid bg-secondary text-dark mt-5 pt-5">
       <div className="row px-xl-5 pt-5">
         <div className="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-          <a href="index.html" className="text-decoration-none">
+          <a href="/" className="text-decoration-none">
             <h1 className="mb-4 display-5 font-weight-semi-bold">
               <span className="text-primary font-weight-bold border border-white px-3 mr-1">
                 VARATILYO
@@ -26,8 +26,31 @@ const Footer = () => {
           </p>
         </div>
         <div className="col-lg-8 col-md-12">
-          <div className="row">
+          <div className="d-flex flex-row justify-content-evenly">
             <div className="col-md-4 mb-5">
+              <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
+              <div className="d-flex flex-column justify-content-start">
+                <a className="text-dark mb-2" href="/">
+                  <i className="fa fa-angle-right mr-2"></i>Home
+                </a>
+                <a className="text-dark mb-2" href="/shop">
+                  <i className="fa fa-angle-right mr-2"></i>Our Shop
+                </a>
+                <a className="text-dark mb-2" href="#">
+                  <i className="fa fa-angle-right mr-2"></i>Product Detail
+                </a>
+                <a className="text-dark mb-2" href="/shop/cart">
+                  <i className="fa fa-angle-right mr-2"></i>Shopping Cart
+                </a>
+                <a className="text-dark mb-2" href="/shop/cart">
+                  <i className="fa fa-angle-right mr-2"></i>Checkout
+                </a>
+                <a className="text-dark" href="/contact">
+                  <i className="fa fa-angle-right mr-2"></i>Contact Us
+                </a>
+              </div>
+            </div>
+            {/* <div className="col-md-4 mb-5">
               <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
               <div className="d-flex flex-column justify-content-start">
                 <a className="text-dark mb-2" href="index.html">
@@ -49,30 +72,7 @@ const Footer = () => {
                   <i className="fa fa-angle-right mr-2"></i>Contact Us
                 </a>
               </div>
-            </div>
-            <div className="col-md-4 mb-5">
-              <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
-              <div className="d-flex flex-column justify-content-start">
-                <a className="text-dark mb-2" href="index.html">
-                  <i className="fa fa-angle-right mr-2"></i>Home
-                </a>
-                <a className="text-dark mb-2" href="shop.html">
-                  <i className="fa fa-angle-right mr-2"></i>Our Shop
-                </a>
-                <a className="text-dark mb-2" href="product-detail.html">
-                  <i className="fa fa-angle-right mr-2"></i>Product Detail
-                </a>
-                <a className="text-dark mb-2" href="cart.html">
-                  <i className="fa fa-angle-right mr-2"></i>Shopping Cart
-                </a>
-                <a className="text-dark mb-2" href="checkout.html">
-                  <i className="fa fa-angle-right mr-2"></i>Checkout
-                </a>
-                <a className="text-dark" href="contact.html">
-                  <i className="fa fa-angle-right mr-2"></i>Contact Us
-                </a>
-              </div>
-            </div>
+            </div> */}
             <div className="col-md-4 mb-5">
               <h5 className="font-weight-bold text-dark mb-4">Newsletter</h5>
               <p>Subscribe to our Newsletter</p>
@@ -109,7 +109,7 @@ const Footer = () => {
       <div className="border-top border-light mx-xl-5 py-4 text-center">
         <p className="text-center text-dark">
           &copy;
-          <a className="font-weight-semi-bold" href="index.html">
+          <a className="font-weight-semi-bold" href="/">
             Varatilyo
           </a>
           . All Rights Reserved.

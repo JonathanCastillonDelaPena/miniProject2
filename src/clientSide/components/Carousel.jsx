@@ -15,7 +15,7 @@ function Carousel() {
           className="carousel-item active"
           data-bs-interval="10000"
         >
-          <img  className="img-fluid" src={img} alt="Imagesarisari" />
+          <img className="img-fluid" src={img} alt="Imagesarisari" />
 
           <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div className="p-3">
@@ -25,10 +25,7 @@ function Carousel() {
               <h3 className="display-4 text-white font-weight-semi-bold mb-4">
                 Can Foods
               </h3>
-              <a
-                href="shop.html"
-                className="btn btn-primary text-light py-2 px-3"
-              >
+              <a href="/shop" className="btn btn-primary text-light py-2 px-3">
                 Shop Now
               </a>
             </div>

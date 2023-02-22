@@ -45,19 +45,23 @@ const Sidebar = () => {
         <div className="position-sticky pt-5 sidebar-sticky">
           <ul className="nav flex-column">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <a
+                className="nav-link"
+                aria-current="page"
+                href="/admin/dashboard"
+              >
                 <span data-feather="home" className="align-text-bottom"></span>
                 Dashboard
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="/admin/dashboard/profile">
                 <span data-feather="home" className="align-text-bottom"></span>
                 Profile
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="/admin/dashboard/order">
                 <span data-feather="file" className="align-text-bottom"></span>
                 Orders
               </a>
@@ -73,19 +77,19 @@ const Sidebar = () => {
               </button>
               <ul className="dropdown-menu dropdown-menu-dark">
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/admin/dashboard">
                     Product List
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/admin/dashboard">
                     Product Details
                   </a>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="#">
                 <span data-feather="users" className="align-text-bottom"></span>
                 Customers
               </a>

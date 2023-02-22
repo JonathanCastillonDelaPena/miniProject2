@@ -42,7 +42,7 @@ function Top() {
 
       <div className="row align-items-center py-3 px-xl-5">
         <div className="col-lg-6 d-none d-lg-block">
-          <a href="index.html" className="text-decoration-none">
+          <a href="/" className="text-decoration-none">
             <h1 className="m-0 display-5 font-weight-semi-bold">
               <span className="text-primary font-weight-bold border px-3 mr-1">
                 VARATILYO
@@ -67,11 +67,11 @@ function Top() {
           </form>
         </div>
         <div className="col-lg-3 col-3 text-right">
-          <a href="login" className="btn border">
+          <a href="#" className="btn border">
             <i className="fas fa-user text-primary"></i>
             <span className="badge text-dark">0</span>
           </a>
-          <a href="cart.html" className="btn border">
+          <a href="/shop/cart" className="btn border">
             <i className="fas fa-shopping-cart text-primary"></i>
             <span className="badge text-dark">0</span>
           </a>
